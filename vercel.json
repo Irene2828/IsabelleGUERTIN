@@ -38,11 +38,23 @@
     { "source": "/post-sitemap.xml", "destination": "/sitemap.xml", "statusCode": 301 },
     { "source": "/wp-sitemap.xml", "destination": "/sitemap.xml", "statusCode": 301 }
   ],
+  "rewrites": [
+    {
+      "source": "/robots.txt",
+      "has": [{ "type": "host", "value": "(?:.*\\.)?staging\\.rguertin\\.ca" }],
+      "destination": "/robots-staging.txt"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
+      "has": [{ "type": "host", "value": "(?:.*\\.)?staging\\.rguertin\\.ca" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": ".*\\.vercel\\.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
     },
     {
       "source": "/(.*)",

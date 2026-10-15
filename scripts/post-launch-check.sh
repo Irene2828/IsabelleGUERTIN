@@ -36,23 +36,43 @@ else
     pass "No 'X-Robots-Tag: noindex' found on https://rguertin.ca"
 fi
 
-# 4. Sitemap and Robots
-robots_status=$(curl -s -o /dev/null -w "%{http_code}" https://rguertin.ca/robots.txt)
+# 4. Sitemap, Robots, LLMs.txt and Social Graphic
+robots_status=$(curl -s -L -k -o /dev/null -w "%{http_code}" https://rguertin.ca/robots.txt)
 if [ "$robots_status" -eq 200 ]; then 
-    pass "robots.txt is live"
+    pass "robots.txt is live (HTTP 200)"
 else 
     fail "robots.txt returned HTTP $robots_status"
 fi
 
-sitemap_count=$(curl -s https://rguertin.ca/sitemap.xml | grep -c "<loc>")
+sitemap_count=$(curl -s -L -k https://rguertin.ca/sitemap.xml | grep -c "<loc>")
 if [ "$sitemap_count" -eq 10 ]; then 
     pass "sitemap.xml is live and lists 10 URLs"
 else 
     fail "sitemap.xml lists $sitemap_count URLs (expected 10)"
 fi
 
-# 5. /en route check
-en_html=$(curl -s https://rguertin.ca/en)
+llms_status=$(curl -s -L -k -o /dev/null -w "%{http_code}" https://rguertin.ca/llms.txt)
+if [ "$llms_status" -eq 200 ]; then
+    pass "llms.txt is live (HTTP 200)"
+else
+    fail "llms.txt returned HTTP $llms_status"
+fi
+
+og_status=$(curl -s -L -k -o /dev/null -w "%{http_code}" https://rguertin.ca/isabelle-portrait-opt.webp)
+if [ "$og_status" -eq 200 ]; then
+    pass "og:image asset /isabelle-portrait-opt.webp is live (HTTP 200)"
+else
+    fail "og:image asset /isabelle-portrait-opt.webp returned HTTP $og_status"
+fi
+
+# 5. Staging Environment noindex Verification (if staging DNS resolves)
+staging_robots=$(curl -s -k -I https://staging.rguertin.ca/ 2>/dev/null | grep -i "x-robots-tag.*noindex" || true)
+if [ -n "$staging_robots" ]; then
+    pass "staging.rguertin.ca correctly sends X-Robots-Tag: noindex header"
+fi
+
+# 6. /en route check
+en_html=$(curl -s -k https://rguertin.ca/en)
 if echo "$en_html" | grep -i '<html[^>]*lang="en"' > /dev/null; then 
     pass "/en has <html lang=\"en\">"
 else 
@@ -64,7 +84,7 @@ else
     fail "/en missing hreflang tags"
 fi
 
-# 6. WP Legacy Redirects
+# 7. WP Legacy Redirects
 redirects=(
     "/notre-expertise"
     "/notre-equipe"

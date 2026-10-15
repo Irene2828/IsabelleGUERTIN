@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getPageMeta } from '../seo/pages';
 import { OG_LOCALE } from '../seo/routing';
+import { BUSINESS, SITE_URL } from '../seo/site';
 
 /**
  * Keeps <head> in sync during client-side navigation.
@@ -48,10 +49,12 @@ export default function usePageMeta() {
     setMetaName('description', meta.description);
     setMetaProp('og:title', meta.title);
     setMetaProp('og:description', meta.description);
+    setMetaProp('og:image', `${SITE_URL}${BUSINESS.image}`);
     setMetaProp('og:locale', OG_LOCALE[meta.lang]);
     setMetaProp('og:locale:alternate', OG_LOCALE[meta.lang === 'fr' ? 'en' : 'fr']);
     setMetaName('twitter:title', meta.title);
     setMetaName('twitter:description', meta.description);
+    setMetaName('twitter:image', `${SITE_URL}${BUSINESS.image}`);
 
     if (meta.noindex) {
       setMetaName('robots', 'noindex');

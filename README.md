@@ -86,7 +86,8 @@ The repository is configured for zero-configuration hosting on **Vercel** via `v
 - **Static output**: one HTML file per route (`cleanUrls`, no trailing slash). No SPA catch-all rewrite, so unknown URLs return a real 404.
 - **301 redirects** from every URL of the old WordPress site (7 FR + 6 EN pages, 0 posts — verified via the WP REST API on 2026-10-06) plus old sitemap/category URLs.
 - **www → apex** is configured **only in Vercel → Domains** (not in `vercel.json`), so there is a single source of truth and no redirect loop.
-- **Preview/staging hosts** (`*.vercel.app` only) send `X-Robots-Tag: noindex`. The rule matches the host header, so it never applies to `rguertin.ca`.
+- **Preview/staging hosts** (`*.vercel.app` and `staging.rguertin.ca`) send `X-Robots-Tag: noindex, nofollow` headers and rewrite `/robots.txt` to disallow all crawling (`public/robots-staging.txt`). These rules match the host header, so they never apply to production `rguertin.ca`.
+- **AI & Search Assets**: Public assets include `/favicon.svg`, `/robots.txt`, `/sitemap.xml`, `/llms.txt`, and primary social card graphic `/isabelle-portrait-opt.webp` for Open Graph and Twitter cards.
 
 ---
 
