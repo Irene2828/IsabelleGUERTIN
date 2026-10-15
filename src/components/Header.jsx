@@ -73,7 +73,7 @@ export default function Header() {
               decoding="async"
             />
             <span className="font-inter text-[11px] sm:text-[13px] font-semibold tracking-[0.16em] uppercase text-white leading-[1.35] whitespace-nowrap">
-              R. Guertin<br className="sm:hidden" /> &amp; Ass
+              R. Guertin<br className="sm:hidden" /> &amp; Ass.
             </span>
           </Link>
           <nav className="hidden lg:flex items-center gap-8" style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}>
