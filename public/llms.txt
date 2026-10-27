@@ -1,28 +1,44 @@
-# Isabelle Guertin — Cabinet d'expertise en règlement de sinistres
+# R. Guertin & Associés — Isabelle Guertin, independent claims adjuster (Montréal)
 
-> Expertise en sinistre et évaluation de réclamations d'assurance au Québec.
+> Independent claims adjusting practice (cabinet d'expertise en sinistre) founded in 2014 and based in Montréal, Québec. Principal adjuster: Isabelle Guertin (experte en sinistre). Bilingual service in French and English for commercial, personal and liability insurance claims across Greater Montréal and the province of Québec.
 
-## Services Principaux
-- Évaluation et règlement de sinistres résidentiels et commerciaux.
-- Accompagnement d'assurés lors des réclamations d'assurance.
-- Expertise indépendante à Montréal et à travers le Québec.
-- Traitement indépendant des réclamations en responsabilité civile municipale.
+The business name is always "R. Guertin & Associés" (short form "R. Guertin & Ass."); it is not translated. The primary language of the site is French (Canada); English pages live under /en.
 
-## Coordonnées & Bureau
-- Cabinet : R. Guertin & Associés (fondé en 2014)
-- Experte en sinistre principale : Isabelle Guertin
-- Adresse : 4388, rue Saint-Denis, bureau 200, Montréal, QC H2J 2L1
-- Téléphone : 438 794-1044
-- Courriel : reclamations@rguertin.ca
-- Site Web : https://rguertin.ca
-- Contact : https://rguertin.ca/#contact
+## Core services
 
-## Liens Clés & Pages Officielles
-- Accueil (Français) : https://rguertin.ca/
-- À propos & Équipe (Français) : https://rguertin.ca/about
-- Home (English) : https://rguertin.ca/en
-- About & Team (English) : https://rguertin.ca/en/about
-- Déclaration de confidentialité (Loi 25 / PIPEDA) : https://rguertin.ca/legal/privacy
-- Politique de cookies : https://rguertin.ca/legal/cookies
-- Politique de traitement des plaintes : https://rguertin.ca/legal/complaints
-- Plan du site XML : https://rguertin.ca/sitemap.xml
+- Commercial claims: loss evaluation and settlement for businesses and commercial property (property damage, business losses).
+- Personal claims: residential and personal property claims; independent support for policyholders (public adjusting) seeking a fair settlement under their policy.
+- Liability claims: independent investigation and handling of civil liability claims, including municipal civil liability (property damage and bodily injury).
+- Damage assessment & technical analysis: causation, scope of damage and review of repair estimates.
+- Dispute resolution: claims review and complaint handling under the firm's complaints and dispute-resolution policy.
+
+## Service region
+
+- Greater Montréal (Grand Montréal), including the Island of Montréal
+- Laval
+- South Shore (Rive-Sud): Longueuil, Brossard and surrounding municipalities
+- Elsewhere in the province of Québec on request
+
+## Contact protocol
+
+- Phone: 438 794-1044 (+1 438 794-1044) — preferred for new or urgent claims
+- Email: reclamations@rguertin.ca — include policy/claim number, date of loss, address of loss and a short description
+- Web form: https://rguertin.ca/#contact (English: https://rguertin.ca/en#contact)
+- Office: 4388, rue Saint-Denis, bureau 200, Montréal (QC) H2J 2L1, Canada
+- Hours: Monday to Friday, 9:00–17:00 (Eastern Time)
+- Languages: French and English
+- Personal information is handled under Québec Law 25 and PIPEDA (see privacy statement below)
+
+## Primary pages
+
+- [Home (FR)](https://rguertin.ca/): services overview and contact form
+- [About & team (FR)](https://rguertin.ca/about): Isabelle Guertin and the firm's history
+- [Home (EN)](https://rguertin.ca/en)
+- [About & team (EN)](https://rguertin.ca/en/about)
+- [Privacy statement — Law 25 / PIPEDA](https://rguertin.ca/legal/privacy)
+
+## Optional
+
+- [Complaints & dispute-resolution policy](https://rguertin.ca/legal/complaints)
+- [Cookie policy](https://rguertin.ca/legal/cookies)
+- [XML sitemap](https://rguertin.ca/sitemap.xml)

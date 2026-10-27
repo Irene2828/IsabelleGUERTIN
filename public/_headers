@@ -1,0 +1,4 @@
+# Cloudflare Pages: block indexing of preview/staging deployments only.
+# Production (https://rguertin.ca) is not matched by this rule.
+https://*.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
